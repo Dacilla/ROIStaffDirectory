@@ -252,6 +252,7 @@ const StaffDetailsScreen = ({ route, navigation }) => {
                           <Picker.Item label="TAS" value="TAS" />
                           <Picker.Item label="WA" value="WA" />
                           <Picker.Item label="SA" value="SA" />
+                          <Picker.Item label="N/A" value="N/A" />
                       </Picker>
                   </Picker>
               </View>

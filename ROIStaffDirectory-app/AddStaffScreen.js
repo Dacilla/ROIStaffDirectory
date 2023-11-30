@@ -168,6 +168,7 @@ const AddStaffScreen = ({ navigation }) => {
             <Picker.Item label="TAS" value="TAS" />
             <Picker.Item label="WA" value="WA" />
             <Picker.Item label="SA" value="SA" />
+            <Picker.Item label="N/A" value="N/A" />
             </Picker>
         </View>
       </View>
@@ -175,6 +176,7 @@ const AddStaffScreen = ({ navigation }) => {
       <View style={{ width: '100%' }}>
         <Text>Country:</Text>
         <TextInput
+          value="Australia"
           placeholder="Enter country..."
           style={{ borderColor: 'black', borderWidth: 1, marginBottom: 10 }}
           onChangeText={setUpdatedCountry}
