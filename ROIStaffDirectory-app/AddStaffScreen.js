@@ -164,6 +164,10 @@ const AddStaffScreen = ({ navigation }) => {
             <Picker.Item label="ACT" value="ACT" />
             <Picker.Item label="VIC" value="VIC" />
             <Picker.Item label="QLD" value="QLD" />
+            <Picker.Item label="NT" value="NT" />
+            <Picker.Item label="TAS" value="TAS" />
+            <Picker.Item label="WA" value="WA" />
+            <Picker.Item label="SA" value="SA" />
             </Picker>
         </View>
       </View>
