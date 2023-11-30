@@ -35,22 +35,22 @@
     }, []);
 
     // Function to show a Toast message with the provided text
-    const showToast = (message) => {
-      ToastAndroid.show(message, ToastAndroid.SHORT);
-    };
+    // const showToast = (message) => {
+    //   ToastAndroid.show(message, ToastAndroid.SHORT);
+    // };
 
     // Update the fetchStaffMembers function to display response data in the Toast
     const createStaffMembersList = async () => {
       try {
-        showToast('Fetching staff members...');
+        // showToast('Fetching staff members...');
         const response = await fetch(uri);
         const data = await response.json();
         console.log('Fetched staff members:', data); // Log fetched data
         setStaffMembers(data);
-        showToast(`Staff members fetched successfully: ${JSON.stringify(data)}`);
+        // showToast(`Staff members fetched successfully: ${JSON.stringify(data)}`);
       } catch (error) {
         console.error('Error fetching staff members:', error);
-        showToast('Error fetching staff members.');
+        // showToast('Error fetching staff members.');
       }
     };
 
@@ -106,7 +106,7 @@
 
     const fetchStaffMembers = async () => {
       try {
-        showToast('Fetching staff members...');
+        // showToast('Fetching staff members...');
         const response = await fetch(uri);
         const data = await response.json();
         
@@ -114,11 +114,11 @@
         await new Promise(resolve => setTimeout(resolve, 500));
         
         setStaffMembers(data);
-        showToast('Staff members fetched successfully.');
+        // showToast('Staff members fetched successfully.');
         console.log("New Staff Members list: " + JSON.stringify(staffMembers));
       } catch (error) {
         console.error('Error fetching staff members:', error);
-        showToast('Error fetching staff members.');
+        // showToast('Error fetching staff members.');
       }
     };
 
@@ -127,7 +127,7 @@
     };
 
   const handleRefresh = () => {
-    showToast('Refreshing staff list...');
+    // showToast('Refreshing staff list...');
     fetchStaffMembers();
   };
 
