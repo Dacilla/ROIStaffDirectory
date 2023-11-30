@@ -14,6 +14,8 @@ const AddStaffScreen = ({ navigation }) => {
   const [updatedState, setUpdatedState] = useState('');
   const [updatedCountry, setUpdatedCountry] = useState('');
 
+  const uri = 'http://192.168.1.115:3000/';
+
   useEffect(() => {
     fetchDepartmentDictionary();
     navigation.setOptions({
@@ -26,7 +28,7 @@ const AddStaffScreen = ({ navigation }) => {
 
   const fetchDepartmentDictionary = async () => {
     try {
-      const response = await fetch('http://192.168.1.115:3000/departments');
+      const response = await fetch(uri + "departments/");
       const data = await response.json();
       setDepartmentDictionary(data);
 
@@ -68,7 +70,7 @@ const AddStaffScreen = ({ navigation }) => {
 
 
     try {
-      const response = await fetch('http://192.168.1.115:3000/staff/', {
+      const response = await fetch(uri = 'staff/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

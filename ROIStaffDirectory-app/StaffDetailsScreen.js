@@ -17,6 +17,8 @@ const StaffDetailsScreen = ({ route, navigation }) => {
     const [updatedState, setUpdatedState] = useState(staffMember.Address.State);
     const [updatedCountry, setUpdatedCountry] = useState(staffMember.Address.Country);
   
+    const uri = 'http://192.168.1.115:3000/';
+
   // Fetch department dictionary when the component mounts
   useEffect(() => {
     // Set header options dynamically
@@ -31,7 +33,7 @@ const StaffDetailsScreen = ({ route, navigation }) => {
 
   const fetchDepartmentDictionary = async () => {
     try {
-      const response = await fetch('http://192.168.1.115:3000/departments');
+      const response = await fetch(uri + 'departments');
       const data = await response.json();
       console.log("Departments received response: " + data.response)
       setDepartmentDictionary(data);
@@ -64,7 +66,7 @@ const StaffDetailsScreen = ({ route, navigation }) => {
           text: 'Yes',
           onPress: async () => {
             try {
-              const response = await fetch(`http://192.168.1.115:3000/staff/${staffMember.Id}`, {
+              const response = await fetch(uri = `staff/${staffMember.Id}`, {
                 method: 'DELETE',
               });
 
@@ -104,7 +106,7 @@ const StaffDetailsScreen = ({ route, navigation }) => {
 
       console.log('Sending PUT request with payload:', JSON.stringify(updatedStaffMember));
 
-      const response = await fetch(`http://192.168.1.115:3000/staff/`, {
+      const response = await fetch(uri + `staff/`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
