@@ -17,7 +17,7 @@ const StaffDetailsScreen = ({ route, navigation }) => {
     const [updatedState, setUpdatedState] = useState(staffMember.Address.State);
     const [updatedCountry, setUpdatedCountry] = useState(staffMember.Address.Country);
   
-    const uri = 'http://192.168.1.115:3000/';
+    const uri = 'http://localhost:3000/';
 
   // Fetch department dictionary when the component mounts
   useEffect(() => {

@@ -1,7 +1,7 @@
 [
   {
     "Id": 1,
-    "Name": "John mmiiiiii",
+    "Name": "John Smith",
     "Phone": "02 9988 2211",
     "Department": 1,
     "Address": {
@@ -61,5 +61,17 @@
       "ZIP": "0110",
       "Country": "Australia"
     }
+  },
+  {
+    "Name": "Jane Doe",
+    "Phone": "0455776763",
+    "Department": 1,
+    "Address": {
+      "Street": "1 Lane Lane",
+      "ZIP": "8888",
+      "State": "NSW",
+      "Country": "Australia"
+    },
+    "Id": 6
   }
 ]

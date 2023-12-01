@@ -14,7 +14,7 @@ const AddStaffScreen = ({ navigation }) => {
   const [updatedState, setUpdatedState] = useState('NSW');
   const [updatedCountry, setUpdatedCountry] = useState('Australia');
 
-  const uri = 'http://192.168.1.115:3000/';
+  const uri = 'http://localhost:3000/';
 
   useEffect(() => {
     fetchDepartmentDictionary();

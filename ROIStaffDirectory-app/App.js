@@ -8,7 +8,7 @@
   import SettingsScreen from './SettingsScreen';
   import * as ScreenOrientation from 'expo-screen-orientation';
 
-  const uri = 'http://192.168.1.115:3000/staff';
+  const uri = 'http://localhost:3000/staff';
 
   const Stack = createStackNavigator();
 
