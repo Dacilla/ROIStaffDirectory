@@ -18,13 +18,13 @@ git clone https://github.com/Dacilla/ROIStaffDirectory.git
 cd ROIStaffDirectory
 ```
 
-1. Then go to the app's folder:
+2. Then go to the app's folder:
 
 ```bash
 cd ROIStaffDirectory-app
 ```
 
-1. Use `npm` to install the dependencies
+3. Use `npm` to install the dependencies
 
 ```bash
 npm install
@@ -38,13 +38,13 @@ npm install
 cd ROIStaffDirectory-service
 ```
 
-1. Install dependencies
+2. Install dependencies
 
 ```bash
 npm install
 ```
 
-1. Open the folder in VS Code, and use `Run > Run without debugging` to start the server
+3. Open the folder in VS Code, and use `Run > Run without debugging` to start the server
 
 ## Running the app
 
@@ -54,7 +54,7 @@ npm install
 cd ROIStaffDirectory-app
 ```
 
-1. Use Expo to start the app's server
+2. Use Expo to start the app's server
 
 ```bash
 npx expo start
