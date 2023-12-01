@@ -43,11 +43,9 @@ const SettingsScreen = ({ navigation, route }) => {
           style={styles.slider}
           minimumValue={0}
           maximumValue={1}
-          value={brightness}
           minimumTrackTintColor="#941a1d"
           maximumTrackTintColor="#D9D9D9"
           thumbTintColor="#941a1d"
-          onValueChange={handleBrightnessChange}
         />
       </View>
 
