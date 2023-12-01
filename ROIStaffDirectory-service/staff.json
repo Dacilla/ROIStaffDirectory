@@ -61,17 +61,5 @@
       "ZIP": "0110",
       "Country": "Australia"
     }
-  },
-  {
-    "Name": "Jane Doe",
-    "Phone": "0433556667",
-    "Department": null,
-    "Address": {
-      "Street": "1 Wine St",
-      "ZIP": "7864",
-      "State": "ACT",
-      "Country": "Australia"
-    },
-    "Id": 6
   }
 ]
