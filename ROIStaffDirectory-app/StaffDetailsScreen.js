@@ -139,15 +139,15 @@ const StaffDetailsScreen = ({ route, navigation }) => {
 };
 
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingHorizontal: 20,
-        backgroundColor: '#D9D9D9',
-      }}
-    >
+      <View
+          style={{
+              flex: 1,
+              alignItems: "center",
+              justifyContent: "center",
+              paddingHorizontal: 20,
+              backgroundColor: "#D9D9D9",
+          }}
+      >
           <Text
               style={{ fontSize: 24, marginBottom: 20 }}
           >{`Name: ${staffMember.Name}`}</Text>
@@ -191,21 +191,30 @@ const StaffDetailsScreen = ({ route, navigation }) => {
               />
           </View>
 
-          <View style={{ width: '100%' }}>
-        <Text>Dept:</Text>
-        {Object.keys(departmentDictionary).length > 0 ? (
-          <Picker
-            selectedValue={updatedDepartment.toString()}
-            onValueChange={(itemValue) => setUpdatedDepartment(parseInt(itemValue))}
-            style={{ marginBottom: 10 }}>
-            {Object.entries(departmentDictionary).map(([id, departmentName]) => (
-              <Picker.Item label={departmentName} value={id} key={id} />
-            ))}
-          </Picker>
-        ) : (
-          <Text>Loading departments...</Text>
-        )}
-      </View>
+          <View style={{ width: "100%" }}>
+              <Text>Dept:</Text>
+              {Object.keys(departmentDictionary).length > 0 ? (
+                  <Picker
+                      selectedValue={updatedDepartment.toString()}
+                      onValueChange={(itemValue) =>
+                          setUpdatedDepartment(parseInt(itemValue))
+                      }
+                      style={{ marginBottom: 10 }}
+                  >
+                      {Object.entries(departmentDictionary).map(
+                          ([id, departmentName]) => (
+                              <Picker.Item
+                                  label={departmentName}
+                                  value={id}
+                                  key={id}
+                              />
+                          )
+                      )}
+                  </Picker>
+              ) : (
+                  <Text>Loading departments...</Text>
+              )}
+          </View>
           <View style={{ width: "100%" }}>
               <Text>Street:</Text>
               <TextInput
@@ -236,24 +245,19 @@ const StaffDetailsScreen = ({ route, navigation }) => {
               <View style={{ width: "48%" }}>
                   <Text>State:</Text>
                   <Picker
-                      selectedValue={updatedState}
                       onValueChange={(itemValue) => setUpdatedState(itemValue)}
+                      selectedValue={staffMember.Address.State}
                       style={{ marginBottom: 10 }}
                   >
-                      <Picker
-                          selectedValue={staffMember.Address.State}
-                          style={{ marginBottom: 10 }}
-                      >
-                          <Picker.Item label="NSW" value="NSW" />
-                          <Picker.Item label="ACT" value="ACT" />
-                          <Picker.Item label="VIC" value="VIC" />
-                          <Picker.Item label="QLD" value="QLD" />
-                          <Picker.Item label="NT" value="NT" />
-                          <Picker.Item label="TAS" value="TAS" />
-                          <Picker.Item label="WA" value="WA" />
-                          <Picker.Item label="SA" value="SA" />
-                          <Picker.Item label="N/A" value="N/A" />
-                      </Picker>
+                      <Picker.Item label="NSW" value="NSW" />
+                      <Picker.Item label="ACT" value="ACT" />
+                      <Picker.Item label="VIC" value="VIC" />
+                      <Picker.Item label="QLD" value="QLD" />
+                      <Picker.Item label="NT" value="NT" />
+                      <Picker.Item label="TAS" value="TAS" />
+                      <Picker.Item label="WA" value="WA" />
+                      <Picker.Item label="SA" value="SA" />
+                      <Picker.Item label="N/A" value="N/A" />
                   </Picker>
               </View>
           </View>
@@ -269,10 +273,20 @@ const StaffDetailsScreen = ({ route, navigation }) => {
                   }}
               />
           </View>
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
-        <Button title="Delete" color="#941a1d" onPress={handleDelete} />
-        <Button title="Save changes" color="black" onPress={handleSaveChanges} />
-      </View>
+          <View
+              style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  width: "100%",
+              }}
+          >
+              <Button title="Delete" color="#941a1d" onPress={handleDelete} />
+              <Button
+                  title="Save changes"
+                  color="black"
+                  onPress={handleSaveChanges}
+              />
+          </View>
       </View>
   );
 };

@@ -11,8 +11,8 @@ const AddStaffScreen = ({ navigation }) => {
   const [updatedDepartment, setUpdatedDepartment] = useState('');
   const [updatedStreet, setUpdatedStreet] = useState('');
   const [updatedZIP, setUpdatedZIP] = useState('');
-  const [updatedState, setUpdatedState] = useState('');
-  const [updatedCountry, setUpdatedCountry] = useState('');
+  const [updatedState, setUpdatedState] = useState('NSW');
+  const [updatedCountry, setUpdatedCountry] = useState('Australia');
 
   const uri = 'http://192.168.1.115:3000/';
 
@@ -70,7 +70,7 @@ const AddStaffScreen = ({ navigation }) => {
 
 
     try {
-      const response = await fetch(uri = 'staff/', {
+      const response = await fetch(uri + 'staff/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
