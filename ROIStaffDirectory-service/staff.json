@@ -61,17 +61,5 @@
       "ZIP": "0110",
       "Country": "Australia"
     }
-  },
-  {
-    "Name": "Jane Doe",
-    "Phone": "0455776763",
-    "Department": 1,
-    "Address": {
-      "Street": "1 Lane Lane",
-      "ZIP": "8888",
-      "State": "NSW",
-      "Country": "Australia"
-    },
-    "Id": 6
   }
 ]
